@@ -3,681 +3,458 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sharp Source | The Source of Success</title>
+    <title>Sharp Source | IT Consulting Luxembourg — Advisory, Projects, Talent & Training</title>
+    <meta name="description" content="Sharp Source is a people-first IT consulting firm in Luxembourg. We deliver advisory, project management, team reinforcement, compliance, managed IT, and Lean Six Sigma training across financial services, insurance, and technology.">
+    <meta name="keywords" content="IT consulting Luxembourg, IT advisory, project management, team augmentation, compliance GDPR DORA, Lean Six Sigma training, IT support Luxembourg">
+    <meta name="author" content="Sharp Source S.à r.l.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.sharpsource.lu/">
+    <meta property="og:title" content="Sharp Source | The Source of Success">
+    <meta property="og:description" content="People-first IT consulting in Luxembourg. Advisory, projects, talent, compliance, support, and training.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sharpsource.lu/">
+    <meta property="og:image" content="https://www.sharpsource.lu/LogoSS_name.png">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="logoSS.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"Sharp Source","alternateName":"Sharp Source S.à r.l.","url":"https://www.sharpsource.lu","logo":"https://www.sharpsource.lu/LogoSS_name.png","description":"People-first IT consulting firm in Luxembourg.","address":{"@type":"PostalAddress","addressLocality":"Luxembourg","addressCountry":"LU"},"email":"info@sharpsource.lu","areaServed":["Luxembourg","Europe"],"serviceType":["IT Consulting","IT Advisory","Project Management","Staff Augmentation","IT Compliance","Managed IT","Lean Six Sigma Training"],"slogan":"The Source of Success"}
+    </script>
     <style>
-        :root {
-            --navy: #1e2842;
-            --navy-deep: #111827;
-            --navy-light: #2b3a56;
-            --slate: #64748b;
-            --slate-light: #94a3b8;
-            --cream: #f8f7f4;
-            --white: #ffffff;
-            --accent: #c5a47e;
-            --accent-light: #dfc9ab;
-            --border: #e2e0db;
-            --font-display: 'Playfair Display', Georgia, serif;
-            --font-body: 'Outfit', sans-serif;
+        :root{--navy:#1e2842;--navy-deep:#111827;--navy-light:#2b3a56;--slate:#64748b;--cream:#f8f7f4;--white:#fff;--accent:#c5a47e;--accent-light:#dfc9ab;--border:#e2e0db;--font-d:'Playfair Display',Georgia,serif;--font-b:'Outfit',sans-serif}
+        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:var(--font-b);color:var(--navy);background:var(--navy-deep);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+        /* NAV */
+        nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1.2rem 0;transition:all .4s cubic-bezier(.16,1,.3,1)}
+        nav.scrolled{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--border);padding:.7rem 0}
+        nav.scrolled .nl a{color:var(--navy)} nav.scrolled .nl a:hover{color:var(--accent)}
+        nav.scrolled .lw{display:none} nav.scrolled .ld{display:block}
+        nav.scrolled .mt span{background:var(--navy)}
+        nav.scrolled .nc{background:var(--navy)!important;color:#fff!important}
+        .ni{max-width:1280px;margin:0 auto;padding:0 3rem;display:flex;align-items:center;justify-content:space-between}
+        .nav-logo img{height:36px} .ld{display:none}
+        .nl{display:flex;align-items:center;gap:2.2rem;list-style:none}
+        .nl a{text-decoration:none;color:rgba(255,255,255,.7);font-size:.88rem;font-weight:500;letter-spacing:.02em;transition:color .3s}
+        .nl a:hover{color:#fff}
+        .nc{background:#fff!important;color:var(--navy)!important;padding:.6rem 1.5rem;border-radius:4px;font-weight:600!important}
+        .mt{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
+        .mt span{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:all .3s}
+
+        /* HERO */
+        .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;background:var(--navy-deep);overflow:hidden;padding:6rem 0 4rem}
+        .hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+        .hg{position:absolute;border-radius:50%;filter:blur(120px);opacity:.1;pointer-events:none}
+        .hg1{width:700px;height:700px;top:-20%;left:-10%;background:var(--accent)}
+        .hg2{width:600px;height:600px;bottom:-25%;right:-10%;background:#4a6fa5}
+        .hc{position:relative;z-index:2;text-align:center;padding:0 2rem;max-width:1000px}
+        .he{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:2.5rem;opacity:0;animation:fu .8s .2s forwards}
+        .he::before,.he::after{content:'';width:30px;height:1px;background:var(--accent);opacity:.5}
+        .ht{font-family:var(--font-d);font-size:clamp(3.5rem,8vw,7.5rem);font-weight:400;line-height:1;letter-spacing:-.03em;color:#fff;margin-bottom:.5rem;opacity:0;animation:fu 1s .4s forwards}
+        .ht em{font-style:italic;background:linear-gradient(135deg,var(--accent-light),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hl{width:1px;height:70px;background:linear-gradient(180deg,var(--accent),transparent);margin:2rem auto;opacity:0;animation:fu .8s .7s forwards}
+
+        /* Marquee */
+        .mw{position:relative;width:100vw;overflow:hidden;opacity:0;animation:fu 1s .9s forwards}
+        .mw::before,.mw::after{content:'';position:absolute;top:0;width:15%;height:100%;z-index:3;pointer-events:none}
+        .mw::before{left:0;background:linear-gradient(90deg,var(--navy-deep),transparent)}
+        .mw::after{right:0;background:linear-gradient(-90deg,var(--navy-deep),transparent)}
+        .mq{display:flex;gap:1.25rem;width:max-content}
+        .mf{animation:ms 35s linear infinite}
+        .mr{animation:msr 40s linear infinite}
+        @keyframes ms{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+        @keyframes msr{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+        .mi{width:220px;height:140px;border-radius:6px;overflow:hidden;flex-shrink:0;position:relative}
+        .mi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+        .mi:hover img{transform:scale(1.05)}
+        .mi::after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.08);border-radius:6px;pointer-events:none}
+        .mg{height:1.25rem}
+
+        .hcom{position:relative;z-index:2;text-align:center;padding:0 2rem;margin-top:2.5rem;opacity:0;animation:fu .8s 1.3s forwards}
+        .hcom p{font-size:1.15rem;line-height:1.7;color:rgba(255,255,255,.5);font-weight:300;max-width:540px;margin:0 auto 2.5rem}
+        .hcom strong{color:rgba(255,255,255,.85);font-weight:500}
+        .ha{display:flex;align-items:center;justify-content:center;gap:1.5rem}
+        .hs{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(255,255,255,.25);font-size:.68rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;opacity:0;animation:fu .6s 1.8s forwards}
+        .hsl{width:1px;height:32px;background:linear-gradient(180deg,rgba(255,255,255,.3),transparent);animation:sp 2s ease-in-out infinite}
+        @keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
+
+        /* BUTTONS */
+        .bp{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--navy);padding:.95rem 2.1rem;border-radius:4px;text-decoration:none;font-size:.92rem;font-weight:600;letter-spacing:.02em;transition:all .3s;border:none;cursor:pointer;font-family:var(--font-b)}
+        .bp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.25)}
+        .bp-d{background:var(--navy);color:#fff}.bp-d:hover{background:var(--navy-light)}
+        .bp-l{background:#fff;color:var(--navy)}.bp-l:hover{background:var(--cream)}
+        .bg{display:inline-flex;align-items:center;gap:.5rem;color:rgba(255,255,255,.6);text-decoration:none;font-size:.92rem;font-weight:500;transition:color .3s;padding:.95rem 0;border:none;background:none;cursor:pointer;font-family:var(--font-b)}
+        .bg:hover{color:#fff} .bg svg{transition:transform .3s} .bg:hover svg{transform:translateX(4px)}
+        .asv{width:16px;height:16px}
+
+        /* SECTIONS */
+        section{padding:7rem 0}
+        .ct{max-width:1280px;margin:0 auto;padding:0 3rem}
+        .sh{margin-bottom:4rem}
+        .sl{display:inline-flex;align-items:center;gap:.5rem;font-size:.76rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem}
+        .sl::before{content:'';width:24px;height:1.5px;background:var(--accent)}
+        .st{font-family:var(--font-d);font-size:clamp(2rem,3.5vw,3rem);font-weight:400;line-height:1.15;letter-spacing:-.01em;color:var(--navy)}
+        .ss{font-size:1.05rem;line-height:1.7;color:var(--slate);max-width:560px;margin-top:1.25rem;font-weight:300}
+
+        /* INDUSTRY */
+        .ind{padding:5rem 0;border-bottom:1px solid var(--border);background:#fff}
+        .ind-i{max-width:1280px;margin:0 auto;padding:0 3rem}
+        .ind-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+        .ic{background:#fff;padding:2.5rem 2rem;transition:all .4s;text-align:center}
+        .ic:hover{background:var(--cream)}
+        .iic{width:56px;height:56px;margin:0 auto 1.25rem;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .4s}
+        .ic:hover .iic{background:var(--navy);color:#fff}
+        .ic h4{font-family:var(--font-d);font-size:1.15rem;font-weight:400;color:var(--navy);margin-bottom:.5rem}
+        .ic p{font-size:.85rem;line-height:1.55;color:var(--slate);font-weight:300}
+
+        /* SERVICES */
+        .srv{background:var(--cream)}
+        .srv-l{display:grid;grid-template-columns:1fr 1.6fr;gap:4rem;align-items:start}
+        .srv-s{position:sticky;top:8rem}
+        .sc{background:#fff;display:grid;grid-template-columns:auto 1fr;gap:1.75rem;padding:2rem 2.25rem;border:1px solid var(--border);transition:all .4s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;margin-bottom:-1px}
+        .sc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent);transform:scaleY(0);transform-origin:top;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+        .sc:hover::before{transform:scaleY(1)} .sc:hover{box-shadow:0 8px 40px rgba(30,40,66,.08);transform:translateX(4px)}
+        .sn{font-family:var(--font-d);font-size:2.25rem;color:var(--border);line-height:1;min-width:48px}
+        .sc:hover .sn{color:var(--accent)}
+        .sc h3{font-family:var(--font-d);font-size:1.25rem;font-weight:400;margin-bottom:.5rem;color:var(--navy)}
+        .sc p{font-size:.88rem;line-height:1.65;color:var(--slate);font-weight:300}
+        .stg{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.75rem}
+        .stg span{font-size:.7rem;font-weight:500;letter-spacing:.04em;padding:.22rem .6rem;background:var(--cream);border:1px solid var(--border);color:var(--slate);border-radius:2px}
+
+        /* VISUAL BREAK */
+        .vb{position:relative;height:460px;overflow:hidden}
+        .vb-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,24,39,.92),rgba(30,40,66,.85)),url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80') center/cover}
+        .vb-c{position:relative;z-index:1;height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:3rem}
+        .vb-t{max-width:680px}
+        .vb-t blockquote{font-family:var(--font-d);font-size:clamp(1.6rem,2.8vw,2.35rem);color:#fff;font-weight:400;line-height:1.4;font-style:italic}
+        .vb-t cite{display:block;margin-top:1.5rem;font-size:.85rem;color:var(--accent-light);font-style:normal;letter-spacing:.08em;text-transform:uppercase}
+
+        /* APPROACH */
+        .appr{background:var(--navy-deep);color:#fff;position:relative;overflow:hidden}
+        .appr::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(197,164,126,.06),transparent 70%);pointer-events:none}
+        .appr .sl{color:var(--accent-light)} .appr .st{color:#fff}
+        .appr-g{display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center}
+        .appr-vis{position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3}
+        .appr-vis img{width:100%;height:100%;object-fit:cover}
+        .appr-vis::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,24,39,.2),transparent 60%)}
+        .appr-stmt{font-family:var(--font-d);font-size:1.5rem;line-height:1.45;color:rgba(255,255,255,.9);margin:1.5rem 0 2.5rem}
+        .appr-stmt em{font-style:italic;color:var(--accent-light)}
+        .vl{display:flex;flex-direction:column}
+        .vi{padding:1.25rem 0;border-top:1px solid rgba(255,255,255,.07);display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start}
+        .vic{width:38px;height:38px;border-radius:50%;background:rgba(197,164,126,.1);display:flex;align-items:center;justify-content:center;color:var(--accent-light);flex-shrink:0}
+        .vi h4{font-family:var(--font-d);font-size:1.08rem;margin-bottom:.25rem;color:#fff}
+        .vi p{font-size:.83rem;line-height:1.6;color:rgba(255,255,255,.45);font-weight:300}
+
+        /* WHY US (inside approach) */
+        .why-g{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+        .wc{padding:2.5rem 2rem;border:1px solid rgba(255,255,255,.06);margin-right:-1px;margin-bottom:-1px;transition:all .4s}
+        .wc:hover{background:rgba(255,255,255,.03)}
+        .wci{width:56px;height:56px;border-radius:50%;background:rgba(197,164,126,.1);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;color:var(--accent-light);transition:all .4s}
+        .wc:hover .wci{background:rgba(197,164,126,.2)}
+        .wc h4{font-family:var(--font-d);font-size:1.2rem;font-weight:400;margin-bottom:.65rem;color:#fff}
+        .wc p{font-size:.88rem;line-height:1.7;color:rgba(255,255,255,.45);font-weight:300}
+
+        /* FAQ */
+        .faq{background:var(--cream)}
+        .faq-l{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+        .faq-s{position:sticky;top:8rem}
+        .faq-v{margin-top:2.5rem;border-radius:6px;overflow:hidden;aspect-ratio:16/10}
+        .faq-v img{width:100%;height:100%;object-fit:cover}
+        .fls{border-top:1px solid var(--border)}
+        .fi{border-bottom:1px solid var(--border)}
+        .fq{width:100%;background:none;border:none;padding:1.4rem 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:var(--font-b);font-size:1.02rem;font-weight:500;color:var(--navy);text-align:left;transition:color .3s}
+        .fq:hover{color:var(--accent)}
+        .fic{width:20px;height:20px;flex-shrink:0;margin-left:1rem;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+        .fi.active .fic{transform:rotate(45deg)}
+        .fa{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+        .fai{padding:0 0 1.4rem;font-size:.92rem;line-height:1.7;color:var(--slate);font-weight:300}
+
+        /* JOBS */
+        .jobs{background:#fff;border-top:1px solid var(--border)}
+        .jobs-inner{max-width:900px;margin:0 auto;text-align:center}
+        .jobs-grid{margin-top:3rem;display:flex;flex-direction:column}
+        .jc{border:1px solid var(--border);margin-bottom:-1px;background:#fff;overflow:hidden;transition:background .3s}
+        .jc-top{display:flex;align-items:center;justify-content:space-between;padding:1.5rem 2rem;cursor:pointer;transition:background .3s}
+        .jc-top:hover{background:var(--cream)}
+        .jc-left{text-align:left}
+        .jc h4{font-family:var(--font-d);font-size:1.15rem;font-weight:400;margin-bottom:.25rem;color:var(--navy)}
+        .jc-meta{font-size:.82rem;color:var(--slate);font-weight:300}
+        .jc-meta span{margin-right:1rem}
+        .jc-arrow{color:var(--accent);transition:transform .3s;flex-shrink:0}
+        .jc.open .jc-arrow{transform:rotate(90deg)}
+        .jc-body{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.16,1,.3,1)}
+        .jc-body-inner{padding:0 2rem 2rem;text-align:left}
+        .jc-body-inner p{font-size:.9rem;line-height:1.7;color:var(--slate);font-weight:300;margin-bottom:1rem}
+        .jc-body-inner ul{list-style:none;margin-bottom:1.5rem}
+        .jc-body-inner li{font-size:.88rem;line-height:1.8;color:var(--slate);font-weight:300;padding-left:1.25rem;position:relative}
+        .jc-body-inner li::before{content:'—';position:absolute;left:0;color:var(--accent)}
+        .jc-actions{display:flex;gap:.75rem;flex-wrap:wrap}
+        .jc-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.55rem 1.25rem;border-radius:4px;font-size:.82rem;font-weight:500;text-decoration:none;font-family:var(--font-b);transition:all .3s;border:none;cursor:pointer}
+        .jc-btn-apply{background:var(--navy);color:#fff}
+        .jc-btn-apply:hover{background:var(--navy-light)}
+        .jc-btn-share{background:none;border:1px solid var(--border);color:var(--navy)}
+        .jc-btn-share:hover{background:var(--cream)}
+        .jobs-note{margin-top:2.5rem;font-size:.95rem;color:var(--slate);font-weight:300}
+        .jobs-note a{color:var(--navy);font-weight:500;text-decoration:none;border-bottom:1px solid var(--accent);transition:color .3s}
+        .jobs-note a:hover{color:var(--accent)}
+
+        /* CTA */
+        .cta{position:relative;padding:8rem 0;overflow:hidden}
+        .cta-bg{position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,24,39,.94),rgba(30,40,66,.9)),url('https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=1400&q=80') center/cover}
+        .cta-i{position:relative;z-index:1;max-width:800px;margin:0 auto;text-align:center;padding:0 3rem}
+        .cta .sl{color:var(--accent-light)} .cta .sl::before{background:var(--accent-light)}
+        .cta h2{font-family:var(--font-d);font-size:clamp(2.25rem,4vw,3.5rem);color:#fff;line-height:1.15;margin-bottom:1.25rem}
+        .cta h2 em{font-style:italic;color:var(--accent-light)}
+        .cta-sub{font-size:1.05rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.65;max-width:500px;margin:0 auto 2.5rem}
+
+        /* FOOTER */
+        footer{background:var(--navy-deep);color:#fff;padding:4rem 0 2rem}
+        .ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.06)}
+        .fb p{color:rgba(255,255,255,.4);font-size:.88rem;line-height:1.65;margin-top:1.25rem;font-weight:300;max-width:300px}
+        .fc h5{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.25rem}
+        .fc ul{list-style:none} .fc li{margin-bottom:.7rem}
+        .fc a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.88rem;font-weight:300;transition:color .3s}
+        .fc a:hover{color:var(--accent-light)}
+        .fbot{display:flex;align-items:center;justify-content:space-between;padding-top:2rem;color:rgba(255,255,255,.25);font-size:.8rem}
+        .fbot a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .3s}
+        .fbot a:hover{color:var(--accent-light)}
+        .fli{height:30px;filter:brightness(0) invert(1);opacity:.8}
+
+        @keyframes fu{to{opacity:1;transform:translateY(0)}}
+        .rv{opacity:0;transform:translateY(25px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+        .rv.vis{opacity:1;transform:translateY(0)}
+        .rd1{transition-delay:.1s}.rd2{transition-delay:.2s}.rd3{transition-delay:.3s}.rd4{transition-delay:.4s}.rd5{transition-delay:.5s}
+
+        @media(max-width:1024px){
+            .srv-l{grid-template-columns:1fr}.srv-s{position:relative;top:0}
+            .appr-g{grid-template-columns:1fr;gap:3rem}
+            .why-g{grid-template-columns:1fr}
+            .faq-l{grid-template-columns:1fr;gap:3rem}.faq-s{position:relative;top:0}
+            .ind-g{grid-template-columns:repeat(2,1fr)}
+            .ft{grid-template-columns:1fr 1fr}
+            .mi{width:180px;height:115px}
         }
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: var(--font-body); color: var(--navy); background: var(--navy-deep); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-
-        /* ══════════ NAV ══════════ */
-        nav {
-            position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-            padding: 1.25rem 0;
-            transition: all 0.4s cubic-bezier(0.16,1,0.3,1);
+        @media(max-width:768px){
+            .ni{padding:0 1.5rem}
+            .nl{display:none}
+            .nl.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:var(--navy-deep);padding:1.5rem;border-bottom:1px solid rgba(255,255,255,.08);gap:1rem}
+            nav.scrolled .nl.open{background:#fff}
+            .mt{display:block}
+            .hero{padding:5rem 0 3rem;min-height:100svh}
+            .ht{font-size:clamp(2.5rem,12vw,4.5rem)}.hl{height:45px}
+            .mi{width:150px;height:95px}
+            .hcom p{font-size:1rem}.hs{display:none}
+            .ct,.ind-i{padding:0 1.5rem}
+            section{padding:4.5rem 0}
+            .sc{grid-template-columns:1fr;gap:.5rem}.sn{font-size:1.5rem}
+            .why-g{grid-template-columns:1fr}
+            .ind-g{grid-template-columns:1fr 1fr}
+            .ft{grid-template-columns:1fr}
+            .fbot{flex-direction:column;gap:1rem;text-align:center}
+            .ha{flex-direction:column;gap:.75rem}
+            .cta{padding:5rem 0}.cta-i{padding:0 1.5rem}
+            .vb{height:360px}.appr-vis{aspect-ratio:16/10}
+            .jc-top{padding:1.25rem 1.5rem}
+            .jc-body-inner{padding:0 1.5rem 1.5rem}
+            .jc-actions{flex-direction:column}
         }
-        nav.scrolled {
-            background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
-            box-shadow: 0 1px 0 var(--border); padding: 0.75rem 0;
-        }
-        nav.scrolled .nav-links a { color: var(--navy); }
-        nav.scrolled .nav-links a:hover { color: var(--accent); }
-        nav.scrolled .nav-logo-white { display: none; }
-        nav.scrolled .nav-logo-dark { display: block; }
-        nav.scrolled .menu-toggle span { background: var(--navy); }
-        nav.scrolled .nav-cta { background: var(--navy) !important; color: var(--white) !important; }
-        .nav-inner { max-width: 1280px; margin: 0 auto; padding: 0 3rem; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 36px; transition: opacity 0.3s; }
-        .nav-logo-dark { display: none; }
-        .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.7); font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--white); }
-        .nav-cta { background: var(--white) !important; color: var(--navy) !important; padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 600 !important; transition: all 0.3s !important; }
-        .nav-cta:hover { opacity: 0.9 !important; transform: translateY(-1px); }
-        .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        .menu-toggle span { display: block; width: 22px; height: 2px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
-
-        /* ══════════ HERO ══════════ */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: var(--navy-deep);
-            overflow: hidden;
-            padding: 6rem 0 4rem;
-        }
-
-        /* Subtle grid pattern */
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            pointer-events: none;
-        }
-
-        /* Ambient glow */
-        .hero-glow {
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            border-radius: 50%;
-            filter: blur(120px);
-            opacity: 0.12;
-            pointer-events: none;
-        }
-        .hero-glow-1 { top: -20%; left: -10%; background: var(--accent); }
-        .hero-glow-2 { bottom: -30%; right: -10%; background: #4a6fa5; }
-
-        .hero-center {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 0 2rem;
-            max-width: 1000px;
-        }
-
-        .hero-eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.2s forwards;
-        }
-        .hero-eyebrow::before, .hero-eyebrow::after {
-            content: '';
-            width: 30px;
-            height: 1px;
-            background: var(--accent);
-            opacity: 0.5;
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(3.5rem, 8vw, 7.5rem);
-            font-weight: 400;
-            line-height: 1.0;
-            letter-spacing: -0.03em;
-            color: var(--white);
-            margin-bottom: 0.5rem;
-            opacity: 0;
-            animation: fadeUp 1s 0.4s forwards;
-        }
-        .hero-title em {
-            font-style: italic;
-            background: linear-gradient(135deg, var(--accent-light), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Vertical line from title */
-        .hero-line {
-            width: 1px;
-            height: 80px;
-            background: linear-gradient(180deg, var(--accent), transparent);
-            margin: 2rem auto;
-            opacity: 0;
-            animation: fadeUp 0.8s 0.7s forwards;
-        }
-
-        /* People marquee */
-        .hero-marquee-wrapper {
-            position: relative;
-            width: 100vw;
-            overflow: hidden;
-            margin: 0;
-            opacity: 0;
-            animation: fadeUp 1s 0.9s forwards;
-        }
-
-        .hero-marquee-wrapper::before,
-        .hero-marquee-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: 15%;
-            height: 100%;
-            z-index: 3;
-            pointer-events: none;
-        }
-        .hero-marquee-wrapper::before {
-            left: 0;
-            background: linear-gradient(90deg, var(--navy-deep) 0%, transparent 100%);
-        }
-        .hero-marquee-wrapper::after {
-            right: 0;
-            background: linear-gradient(-90deg, var(--navy-deep) 0%, transparent 100%);
-        }
-
-        .hero-marquee {
-            display: flex;
-            gap: 1.25rem;
-            animation: marqueeSlide 35s linear infinite;
-            width: max-content;
-        }
-
-        .hero-marquee-reverse {
-            animation: marqueeSlideReverse 40s linear infinite;
-        }
-
-        @keyframes marqueeSlide {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @keyframes marqueeSlideReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-        }
-
-        .marquee-img {
-            width: 220px;
-            height: 140px;
-            border-radius: 6px;
-            overflow: hidden;
-            flex-shrink: 0;
-            position: relative;
-        }
-        .marquee-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            filter: brightness(0.7) saturate(0.8);
-            transition: filter 0.5s;
-        }
-        .marquee-img:hover img {
-            filter: brightness(0.9) saturate(1);
-        }
-        .marquee-img::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 6px;
-            pointer-events: none;
-        }
-
-        .marquee-gap { height: 1.25rem; }
-
-        /* Below marquee: commitment line */
-        .hero-commitment {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 0 2rem;
-            margin-top: 2.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s 1.3s forwards;
-        }
-
-        .hero-commitment p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: rgba(255,255,255,0.5);
-            font-weight: 300;
-            max-width: 540px;
-            margin: 0 auto 2.5rem;
-        }
-        .hero-commitment strong {
-            color: rgba(255,255,255,0.85);
-            font-weight: 500;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        /* Scroll indicator */
-        .hero-scroll {
-            position: absolute;
-            bottom: 1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.4rem;
-            color: rgba(255,255,255,0.25);
-            font-size: 0.68rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            opacity: 0;
-            animation: fadeUp 0.6s 1.8s forwards;
-        }
-        .hero-scroll-line {
-            width: 1px; height: 32px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.3), transparent);
-            animation: scrollPulse 2s ease-in-out infinite;
-        }
-        @keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
-
-        /* ══════════ BUTTONS ══════════ */
-        .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--white); color: var(--navy); padding: 0.95rem 2.1rem; border-radius: 4px; text-decoration: none; font-size: 0.92rem; font-weight: 600; letter-spacing: 0.02em; transition: all 0.3s; border: none; cursor: pointer; font-family: var(--font-body); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
-        .btn-primary-dark { background: var(--navy); color: var(--white); }
-        .btn-primary-dark:hover { background: var(--navy-light); box-shadow: 0 8px 30px rgba(30,40,66,0.25); }
-        .btn-primary-light { background: var(--white); color: var(--navy); }
-        .btn-primary-light:hover { background: var(--cream); box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
-        .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.92rem; font-weight: 500; letter-spacing: 0.02em; transition: color 0.3s; padding: 0.95rem 0; border: none; background: none; cursor: pointer; font-family: var(--font-body); }
-        .btn-ghost:hover { color: var(--white); }
-        .btn-ghost svg { transition: transform 0.3s; }
-        .btn-ghost:hover svg { transform: translateX(4px); }
-        .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--navy); text-decoration: none; font-size: 0.92rem; font-weight: 500; transition: color 0.3s; padding: 0.95rem 0; }
-        .btn-secondary:hover { color: var(--accent); }
-        .btn-secondary svg { transition: transform 0.3s; }
-        .btn-secondary:hover svg { transform: translateX(4px); }
-        .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--white); border: 1px solid rgba(255,255,255,0.2); padding: 0.85rem 1.75rem; border-radius: 4px; text-decoration: none; font-size: 0.92rem; font-weight: 400; transition: all 0.3s; font-family: var(--font-body); background: none; cursor: pointer; }
-        .btn-outline:hover { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.05); }
-        .arrow-svg { width: 16px; height: 16px; }
-
-        /* ══════════ SECTIONS ══════════ */
-        section { padding: 7rem 0; }
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 3rem; }
-        .section-header { margin-bottom: 4rem; }
-        .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.76rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
-        .section-label::before { content: ''; width: 24px; height: 1.5px; background: var(--accent); }
-        .section-title { font-family: var(--font-display); font-size: clamp(2rem,3.5vw,3rem); font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; color: var(--navy); }
-        .section-subtitle { font-size: 1.05rem; line-height: 1.7; color: var(--slate); max-width: 560px; margin-top: 1.25rem; font-weight: 300; }
-
-        /* ══════════ INDUSTRY ══════════ */
-        .industry-bar { padding: 5rem 0; border-bottom: 1px solid var(--border); background: var(--white); }
-        .industry-bar-inner { max-width: 1280px; margin: 0 auto; padding: 0 3rem; }
-        .industry-header { margin-bottom: 3rem; }
-        .industry-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-        .industry-card { background: var(--white); padding: 2.5rem 2rem; transition: all 0.4s; cursor: default; text-align: center; }
-        .industry-card:hover { background: var(--cream); }
-        .industry-icon { width: 56px; height: 56px; margin: 0 auto 1.25rem; border-radius: 50%; background: var(--cream); display: flex; align-items: center; justify-content: center; color: var(--navy); transition: all 0.4s; }
-        .industry-card:hover .industry-icon { background: var(--navy); color: var(--white); }
-        .industry-card h4 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; }
-        .industry-card p { font-size: 0.85rem; line-height: 1.55; color: var(--slate); font-weight: 300; }
-
-        /* ══════════ SERVICES ══════════ */
-        .services { background: var(--cream); }
-        .services-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: start; }
-        .services-sticky { position: sticky; top: 8rem; }
-        .service-card { background: var(--white); display: grid; grid-template-columns: auto 1fr; gap: 2rem; padding: 2.25rem; border: 1px solid var(--border); transition: all 0.4s cubic-bezier(0.16,1,0.3,1); position: relative; overflow: hidden; margin-bottom: -1px; }
-        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
-        .service-card:hover::before { transform: scaleY(1); }
-        .service-card:hover { box-shadow: 0 8px 40px rgba(30,40,66,0.08); transform: translateX(4px); }
-        .service-number { font-family: var(--font-display); font-size: 2.25rem; color: var(--border); line-height: 1; min-width: 50px; }
-        .service-card:hover .service-number { color: var(--accent); }
-        .service-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.65rem; color: var(--navy); }
-        .service-card p { font-size: 0.9rem; line-height: 1.7; color: var(--slate); font-weight: 300; }
-        .service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
-        .service-tag { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; padding: 0.25rem 0.65rem; background: var(--cream); border: 1px solid var(--border); color: var(--slate); border-radius: 2px; }
-
-        /* ══════════ VISUAL BREAK ══════════ */
-        .visual-break { position: relative; height: 480px; overflow: hidden; }
-        .visual-break-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,24,39,0.92), rgba(30,40,66,0.85)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80') center/cover; }
-        .visual-break-content { position: relative; z-index: 1; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 3rem; }
-        .visual-break-text { max-width: 680px; }
-        .visual-break-text blockquote { font-family: var(--font-display); font-size: clamp(1.6rem,2.8vw,2.35rem); color: var(--white); font-weight: 400; line-height: 1.4; font-style: italic; }
-        .visual-break-text cite { display: block; margin-top: 1.5rem; font-size: 0.85rem; color: var(--accent-light); font-style: normal; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; }
-
-        /* ══════════ APPROACH ══════════ */
-        .approach { background: var(--navy-deep); color: var(--white); position: relative; overflow: hidden; }
-        .approach::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(197,164,126,0.06) 0%, transparent 70%); pointer-events: none; }
-        .approach .section-label { color: var(--accent-light); }
-        .approach .section-title { color: var(--white); }
-        .approach-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center; }
-        .approach-visual { position: relative; border-radius: 6px; overflow: hidden; aspect-ratio: 4/3; }
-        .approach-visual-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .approach-visual-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,24,39,0.3) 0%, transparent 60%); }
-        .approach-statement { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.45; color: rgba(255,255,255,0.9); font-weight: 400; margin: 1.5rem 0 2.5rem; }
-        .approach-statement em { font-style: italic; color: var(--accent-light); }
-        .values-list { display: flex; flex-direction: column; }
-        .value-item { padding: 1.35rem 0; border-top: 1px solid rgba(255,255,255,0.07); display: grid; grid-template-columns: auto 1fr; gap: 1.15rem; align-items: start; }
-        .value-icon { width: 38px; height: 38px; border-radius: 50%; background: rgba(197,164,126,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent-light); flex-shrink: 0; }
-        .value-item h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; margin-bottom: 0.3rem; color: var(--white); }
-        .value-item p { font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.45); font-weight: 300; }
-
-        /* ══════════ WHY US ══════════ */
-        .why-us { background: var(--white); }
-        .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
-        .why-card { padding: 3rem 2.5rem; border: 1px solid var(--border); margin-right: -1px; margin-bottom: -1px; transition: all 0.4s; }
-        .why-card:hover { background: var(--cream); }
-        .why-card-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--cream); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--navy); transition: all 0.4s; }
-        .why-card:hover .why-card-icon { background: var(--navy); color: var(--white); }
-        .why-card h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.75rem; color: var(--navy); }
-        .why-card p { font-size: 0.9rem; line-height: 1.7; color: var(--slate); font-weight: 300; }
-
-        /* ══════════ FAQ ══════════ */
-        .faq { background: var(--cream); }
-        .faq-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
-        .faq-sticky { position: sticky; top: 8rem; }
-        .faq-visual { margin-top: 2.5rem; border-radius: 6px; overflow: hidden; aspect-ratio: 16/10; }
-        .faq-visual img { width: 100%; height: 100%; object-fit: cover; }
-        .faq-list { border-top: 1px solid var(--border); }
-        .faq-item { border-bottom: 1px solid var(--border); }
-        .faq-question { width: 100%; background: none; border: none; padding: 1.4rem 0; display: flex; align-items: center; justify-content: space-between; cursor: pointer; font-family: var(--font-body); font-size: 1.02rem; font-weight: 500; color: var(--navy); text-align: left; transition: color 0.3s; }
-        .faq-question:hover { color: var(--accent); }
-        .faq-icon { width: 20px; height: 20px; flex-shrink: 0; margin-left: 1rem; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
-        .faq-item.active .faq-icon { transform: rotate(45deg); }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1); }
-        .faq-answer-inner { padding: 0 0 1.4rem; font-size: 0.92rem; line-height: 1.7; color: var(--slate); font-weight: 300; }
-
-        /* ══════════ CONTACT CTA ══════════ */
-        .contact-cta { position: relative; padding: 8rem 0; overflow: hidden; }
-        .contact-cta-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(17,24,39,0.94), rgba(30,40,66,0.9)), url('https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=1400&q=80') center/cover; }
-        .contact-cta-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; text-align: center; padding: 0 3rem; }
-        .contact-cta .section-label { color: var(--accent-light); }
-        .contact-cta .section-label::before { background: var(--accent-light); }
-        .contact-cta h2 { font-family: var(--font-display); font-size: clamp(2.25rem,4vw,3.5rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem; }
-        .contact-cta h2 em { font-style: italic; color: var(--accent-light); }
-        .contact-cta-sub { font-size: 1.05rem; color: rgba(255,255,255,0.55); font-weight: 300; line-height: 1.65; max-width: 500px; margin: 0 auto 2.5rem; }
-        .contact-cta-actions { display: flex; align-items: center; justify-content: center; gap: 1.25rem; flex-wrap: wrap; }
-        .contact-cta-divider { color: rgba(255,255,255,0.2); font-size: 0.85rem; font-weight: 300; }
-
-        /* ══════════ FOOTER ══════════ */
-        footer { background: var(--navy-deep); color: var(--white); padding: 4rem 0 2rem; }
-        .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-        .footer-brand p { color: rgba(255,255,255,0.4); font-size: 0.88rem; line-height: 1.65; margin-top: 1.25rem; font-weight: 300; max-width: 300px; }
-        .footer-col h5 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1.25rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.7rem; }
-        .footer-col a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.88rem; font-weight: 300; transition: color 0.3s; }
-        .footer-col a:hover { color: var(--accent-light); }
-        .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding-top: 2rem; color: rgba(255,255,255,0.25); font-size: 0.8rem; }
-        .footer-logo-img { height: 30px; filter: brightness(0) invert(1); opacity: 0.8; }
-
-        /* ══════════ ANIMATIONS ══════════ */
-        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-        .reveal { opacity: 0; transform: translateY(25px); transition: all 0.8s cubic-bezier(0.16,1,0.3,1); }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
-
-        /* ══════════ RESPONSIVE ══════════ */
-        @media (max-width: 1024px) {
-            .services-layout { grid-template-columns: 1fr; }
-            .services-sticky { position: relative; top: 0; }
-            .approach-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .why-grid { grid-template-columns: repeat(2,1fr); }
-            .faq-layout { grid-template-columns: 1fr; gap: 3rem; }
-            .faq-sticky { position: relative; top: 0; }
-            .industry-grid { grid-template-columns: repeat(2,1fr); }
-            .footer-top { grid-template-columns: 1fr 1fr; }
-            .marquee-img { width: 180px; height: 115px; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-inner { padding: 0 1.5rem; }
-            .nav-links { display: none; }
-            .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--navy-deep); padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); gap: 1rem; }
-            nav.scrolled .nav-links.open { background: var(--white); }
-            .menu-toggle { display: block; }
-            .hero { padding: 5rem 0 3rem; min-height: 100svh; }
-            .hero-title { font-size: clamp(2.5rem, 12vw, 4.5rem); }
-            .hero-line { height: 50px; }
-            .marquee-img { width: 150px; height: 95px; }
-            .hero-commitment p { font-size: 1rem; }
-            .hero-scroll { display: none; }
-            .container { padding: 0 1.5rem; }
-            section { padding: 4.5rem 0; }
-            .service-card { grid-template-columns: 1fr; gap: 0.5rem; }
-            .service-number { font-size: 1.5rem; }
-            .why-grid { grid-template-columns: 1fr; }
-            .industry-grid { grid-template-columns: 1fr 1fr; }
-            .footer-top { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-            .hero-actions { flex-direction: column; gap: 0.75rem; }
-            .contact-cta { padding: 5rem 0; }
-            .contact-cta-actions { flex-direction: column; }
-            .visual-break { height: 380px; }
-            .approach-visual { aspect-ratio: 16/10; }
-        }
-
-        @media (max-width: 480px) {
-            .marquee-img { width: 130px; height: 82px; }
-            .hero-eyebrow::before, .hero-eyebrow::after { width: 16px; }
-            .industry-grid { grid-template-columns: 1fr; }
+        @media(max-width:480px){
+            .mi{width:130px;height:82px}
+            .he::before,.he::after{width:16px}
+            .ind-g{grid-template-columns:1fr}
         }
     </style>
 </head>
 <body>
 
-    <!-- NAV -->
-    <nav id="navbar">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <img src="LogoSS_name.png" alt="Sharp Source" class="nav-logo-white" style="filter:brightness(0) invert(1);">
-                <img src="LogoSS_name.png" alt="Sharp Source" class="nav-logo-dark">
-            </a>
-            <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
-            <ul class="nav-links">
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#services">Expertise</a></li>
-                <li><a href="#approach">Approach</a></li>
-                <li><a href="#why-us">Why Us</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
-
-        <div class="hero-center">
-            <div class="hero-eyebrow">IT Consulting · Luxembourg</div>
-            <h1 class="hero-title">The Source<br>of <em>Success</em></h1>
-        </div>
-
-        <div class="hero-line"></div>
-
-        <!-- Row 1: slides right -->
-        <div class="hero-marquee-wrapper">
-            <div class="hero-marquee">
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=75" alt="Team" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=75" alt="Meeting" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=75" alt="Collaboration" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <!-- duplicate set for seamless loop -->
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=75" alt="Team" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=75" alt="Meeting" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=75" alt="Collaboration" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=75" alt="Professional" loading="lazy"></div>
-            </div>
-        </div>
-
-        <div class="marquee-gap"></div>
-
-        <!-- Row 2: slides left -->
-        <div class="hero-marquee-wrapper">
-            <div class="hero-marquee hero-marquee-reverse">
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?w=500&q=75" alt="Office" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=75" alt="Team" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1600478689929-13c4f23752c1?w=500&q=75" alt="Meeting" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=75" alt="Discussion" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=75" alt="Workspace" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&q=75" alt="Office" loading="lazy"></div>
-                <!-- duplicate -->
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?w=500&q=75" alt="Office" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=75" alt="Team" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1600478689929-13c4f23752c1?w=500&q=75" alt="Meeting" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=75" alt="Discussion" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=75" alt="Professional" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=75" alt="Workspace" loading="lazy"></div>
-                <div class="marquee-img"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&q=75" alt="Office" loading="lazy"></div>
-            </div>
-        </div>
-
-        <div class="hero-commitment">
-            <p><strong>People-first consulting.</strong> Every solution starts with understanding the people behind the challenge.</p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn-primary">Work with us <svg class="arrow-svg" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                <a href="#services" class="btn-ghost">Explore our expertise <svg class="arrow-svg" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            </div>
-        </div>
-
-        <div class="hero-scroll"><div class="hero-scroll-line"></div>Scroll</div>
-    </section>
-
-    <!-- INDUSTRIES -->
-    <section class="industry-bar" id="industries">
-        <div class="industry-bar-inner">
-            <div class="industry-header reveal"><div class="section-label">Sectors We Serve</div><h2 class="section-title">Deep roots in the industries that matter</h2></div>
-            <div class="industry-grid reveal">
-                <div class="industry-card"><div class="industry-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg></div><h4>Financial Services</h4><p>Banks, funds & asset management</p></div>
-                <div class="industry-card"><div class="industry-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Insurance</h4><p>Life, non-life & reinsurance</p></div>
-                <div class="industry-card"><div class="industry-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h4>Commerce & Retail</h4><p>E-commerce & digital platforms</p></div>
-                <div class="industry-card"><div class="industry-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>Technology</h4><p>SaaS, fintech & IT services</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="services-layout">
-                <div class="services-sticky reveal"><div class="section-label">Our Expertise</div><h2 class="section-title">Tailored solutions<br>for every challenge</h2><p class="section-subtitle">End-to-end IT consulting services connecting deep technical expertise with strategic business understanding.</p></div>
-                <div>
-                    <div class="service-card reveal"><div class="service-number">01</div><div><h3>Advisory</h3><p>Strategic IT guidance to align technology decisions with your business goals. We navigate complexity, evaluate options, and build a roadmap for lasting success.</p><div class="service-tags"><span class="service-tag">IT Strategy</span><span class="service-tag">Digital Roadmaps</span><span class="service-tag">Vendor Selection</span></div></div></div>
-                    <div class="service-card reveal reveal-delay-1"><div class="service-number">02</div><div><h3>Projects</h3><p>From inception to delivery, we manage IT projects with precision and accountability. Agile methodology ensures on-time, on-budget execution.</p><div class="service-tags"><span class="service-tag">Project Management</span><span class="service-tag">Agile Delivery</span><span class="service-tag">Transformation</span></div></div></div>
-                    <div class="service-card reveal reveal-delay-2"><div class="service-number">03</div><div><h3>Placement</h3><p>We connect organisations with exceptional IT talent. Our deep network and rigorous vetting ensures the right people with the right skills, fast.</p><div class="service-tags"><span class="service-tag">Staff Augmentation</span><span class="service-tag">Permanent Hire</span><span class="service-tag">Team Building</span></div></div></div>
-                    <div class="service-card reveal reveal-delay-3"><div class="service-number">04</div><div><h3>Compliance</h3><p>Navigate regulatory landscapes with confidence. We ensure your IT systems meet industry standards — from GDPR to DORA and beyond.</p><div class="service-tags"><span class="service-tag">GDPR</span><span class="service-tag">DORA</span><span class="service-tag">Risk Management</span></div></div></div>
-                    <div class="service-card reveal reveal-delay-4"><div class="service-number">05</div><div><h3>Support</h3><p>Reliable, ongoing IT support keeping your operations running smoothly. Dedicated teams ensuring business continuity around the clock.</p><div class="service-tags"><span class="service-tag">Managed Services</span><span class="service-tag">Helpdesk</span><span class="service-tag">Infrastructure</span></div></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VISUAL BREAK -->
-    <div class="visual-break">
-        <div class="visual-break-bg"></div>
-        <div class="visual-break-content"><div class="visual-break-text reveal"><blockquote>"We are professional and focused, but we're also human. The best solutions come from genuine partnership — not just technical delivery."</blockquote><cite>— Sharp Source Philosophy</cite></div></div>
+<nav id="nb" role="navigation" aria-label="Main navigation">
+    <div class="ni">
+        <a href="#" class="nav-logo" aria-label="Sharp Source home"><img src="LogoSS_name.png" alt="Sharp Source" class="lw" style="filter:brightness(0) invert(1);"><img src="LogoSS_name.png" alt="Sharp Source" class="ld"></a>
+        <button class="mt" onclick="document.querySelector('.nl').classList.toggle('open')" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <ul class="nl">
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#services">Expertise</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact" class="nc">Get in Touch</a></li>
+        </ul>
     </div>
+</nav>
 
-    <!-- APPROACH -->
-    <section class="approach" id="approach">
-        <div class="container">
-            <div class="approach-grid">
-                <div class="approach-visual reveal"><img class="approach-visual-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team"><div class="approach-visual-overlay"></div></div>
-                <div>
-                    <div class="reveal"><div class="section-label">Our Approach</div><h2 class="section-title">Driven by people,<br>powered by expertise</h2><p class="approach-statement">We invest in understanding your challenges deeply, because value begins with <em>genuine partnership</em>.</p></div>
-                    <div class="values-list">
-                        <div class="value-item reveal"><div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div><h4>Relationship First</h4><p>Long-lasting partnerships tailored to your unique needs.</p></div></div>
-                        <div class="value-item reveal reveal-delay-1"><div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><h4>Relentless Quality</h4><p>Excellence in every engagement and every outcome we deliver.</p></div></div>
-                        <div class="value-item reveal reveal-delay-2"><div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h4>Inquisitive Thinking</h4><p>We listen, challenge, and ask the right questions.</p></div></div>
-                        <div class="value-item reveal reveal-delay-3"><div class="value-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div><div><h4>Positive Impact</h4><p>Energy and optimism — positive momentum drives transformation.</p></div></div>
-                    </div>
-                </div>
+<header class="hero" role="banner">
+    <div class="hg hg1"></div><div class="hg hg2"></div>
+    <div class="hc"><div class="he">IT Consulting · Luxembourg</div><h1 class="ht">The Source<br>of <em>Success</em></h1></div>
+    <div class="hl" aria-hidden="true"></div>
+    <div class="mw" aria-hidden="true"><div class="mq mf">
+        <div class="mi"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=75" alt="" loading="lazy"></div>
+    </div></div>
+    <div class="mg"></div>
+    <div class="mw" aria-hidden="true"><div class="mq mr">
+        <div class="mi"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1600478689929-13c4f23752c1?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1580894894513-541e068a3e2b?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1600478689929-13c4f23752c1?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1542190891-2093d38760f2?w=500&q=75" alt="" loading="lazy"></div>
+        <div class="mi"><img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&q=75" alt="" loading="lazy"></div>
+    </div></div>
+    <div class="hcom"><p><strong>People-first consulting.</strong> Every solution starts with understanding the people behind the challenge.</p><div class="ha"><a href="#contact" class="bp">Work with us <svg class="asv" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="#services" class="bg">Explore our expertise <svg class="asv" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
+    <div class="hs"><div class="hsl"></div>Scroll</div>
+</header>
+
+<section class="ind" id="industries" aria-labelledby="ind-t">
+    <div class="ind-i">
+        <div class="rv" style="margin-bottom:3rem"><div class="sl">Sectors We Serve</div><h2 class="st" id="ind-t">Deep roots in the industries that matter</h2></div>
+        <div class="ind-g rv">
+            <div class="ic"><div class="iic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/></svg></div><h4>Financial Services</h4><p>Banks, funds & asset management</p></div>
+            <div class="ic"><div class="iic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Insurance</h4><p>Life, non-life & reinsurance</p></div>
+            <div class="ic"><div class="iic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h4>Commerce & Retail</h4><p>E-commerce & digital platforms</p></div>
+            <div class="ic"><div class="iic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h4>Technology</h4><p>IT services & infrastructure</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="srv" id="services" aria-labelledby="srv-t">
+    <div class="ct"><div class="srv-l">
+        <div class="srv-s rv"><div class="sl">Our Expertise</div><h2 class="st" id="srv-t">Tailored solutions for<br>every challenge</h2><p class="ss">End-to-end IT consulting connecting deep technical expertise with strategic business understanding.</p></div>
+        <div>
+            <article class="sc rv"><div class="sn">01</div><div><h3>Advisory</h3><p>Strategic IT guidance to align technology with your business ambitions. We assess your landscape, evaluate options, and define a clear roadmap to get you there.</p><div class="stg"><span>IT Strategy</span><span>Digital Roadmaps</span><span>Vendor Selection</span><span>Architecture</span></div></div></article>
+            <article class="sc rv rd1"><div class="sn">02</div><div><h3>Projects</h3><p>From inception to go-live, we manage IT projects with precision and full accountability. Agile delivery ensures on-time, on-budget execution with measurable outcomes.</p><div class="stg"><span>Project Management</span><span>Agile Delivery</span><span>Transformation</span></div></div></article>
+            <article class="sc rv rd2"><div class="sn">03</div><div><h3>Team Reinforcement</h3><p>Strengthen your teams with the right expertise, exactly when you need it. We embed skilled IT professionals who integrate seamlessly and deliver from day one.</p><div class="stg"><span>Staff Augmentation</span><span>Specialist Embedding</span><span>Team Scaling</span></div></div></article>
+            <article class="sc rv rd3"><div class="sn">04</div><div><h3>Compliance</h3><p>Navigate complex regulatory landscapes with confidence. We ensure your IT systems and processes meet the standards that matter — from GDPR to DORA and beyond.</p><div class="stg"><span>GDPR</span><span>DORA</span><span>Risk Management</span><span>Audit Readiness</span></div></div></article>
+            <article class="sc rv rd4"><div class="sn">05</div><div><h3>Managed IT</h3><p>Let specialists run your day-to-day IT so you can focus entirely on your core business. Proactive monitoring, responsive support, and complete peace of mind.</p><div class="stg"><span>Infrastructure</span><span>Helpdesk</span><span>Monitoring</span><span>Business Continuity</span></div></div></article>
+            <article class="sc rv rd5"><div class="sn">06</div><div><h3>Training</h3><p>Upskill your teams with certified professional training. We deliver Lean Six Sigma programmes — Yellow Belt and Green Belt — along with tailored IT workshops.</p><div class="stg"><span>Lean Six Sigma</span><span>Yellow Belt</span><span>Green Belt</span><span>Workshops</span></div></div></article>
+        </div>
+    </div></div>
+</section>
+
+<div class="vb" role="presentation"><div class="vb-bg"></div><div class="vb-c"><div class="vb-t rv"><blockquote>"We are professional and focused, but we're also human. The best solutions come from genuine partnership — not just technical delivery."</blockquote><cite>— Sharp Source Philosophy</cite></div></div></div>
+
+<section class="appr" id="approach" aria-labelledby="appr-t">
+    <div class="ct"><div class="appr-g">
+        <div class="appr-vis rv"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Sharp Source team in a strategy session"></div>
+        <div>
+            <div class="rv"><div class="sl">Our Approach</div><h2 class="st" id="appr-t">Driven by people,<br>powered by expertise</h2><p class="appr-stmt">We invest in understanding your challenges deeply, because value begins with <em>genuine partnership</em>.</p></div>
+            <div class="vl">
+                <div class="vi rv"><div class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div><h4>Relationship First</h4><p>Long-lasting partnerships built on trust, not transactions.</p></div></div>
+                <div class="vi rv rd1"><div class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><h4>Relentless Quality</h4><p>Excellence in every engagement and every outcome.</p></div></div>
+                <div class="vi rv rd2"><div class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div><h4>Inquisitive Thinking</h4><p>We listen, challenge, and ask the right questions.</p></div></div>
+                <div class="vi rv rd3"><div class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div><div><h4>Positive Impact</h4><p>Energy and optimism — momentum drives transformation.</p></div></div>
             </div>
         </div>
-    </section>
+    </div></div>
+        <div class="why-g rv" style="margin-top:4rem;padding-top:4rem;border-top:1px solid rgba(255,255,255,.06)">
+            <div class="wc rv"><div class="wci"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Luxembourg Expertise</h4><p>Deep roots in the Luxembourg IT ecosystem. We understand the local regulatory landscape, talent market, and specific challenges faced by institutions here.</p></div>
+            <div class="wc rv rd1"><div class="wci"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>End-to-End Delivery</h4><p>From strategy to execution to support — we cover the full lifecycle. One partner, complete coverage, zero gaps in accountability.</p></div>
+            <div class="wc rv rd2"><div class="wci"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h4>People-First Network</h4><p>We know every consultant personally, ensuring cultural and technical fit for every engagement.</p></div>
+        </div>
+    </div>
+</section>
 
-    <!-- WHY US -->
-    <section class="why-us" id="why-us">
-        <div class="container">
-            <div class="section-header reveal"><div class="section-label">Why Sharp Source</div><h2 class="section-title">What sets us apart</h2></div>
-            <div class="why-grid">
-                <div class="why-card reveal"><div class="why-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h4>Luxembourg Expertise</h4><p>Deep roots in the Luxembourg IT ecosystem — regulatory landscape, talent market, and institutional challenges.</p></div>
-                <div class="why-card reveal reveal-delay-1"><div class="why-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>End-to-End Delivery</h4><p>Strategy to execution to support. One partner, complete coverage, zero gaps in accountability.</p></div>
-                <div class="why-card reveal reveal-delay-2"><div class="why-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h4>People-First Network</h4><p>We know every consultant personally, ensuring cultural and technical fit for every engagement.</p></div>
+<section class="faq" id="faq" aria-labelledby="faq-t">
+    <div class="ct"><div class="faq-l">
+        <div class="faq-s"><div class="rv"><div class="sl">Questions & Answers</div><h2 class="st" id="faq-t">Frequently<br>asked questions</h2><p class="ss">Everything you need to know about working with us.</p></div><div class="faq-v rv"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="Team discussion"></div></div>
+        <div class="fls rv">
+            <div class="fi"><button class="fq" onclick="tf(this)">What types of IT expertise do you offer?<svg class="fic" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="fa"><div class="fai">We cover the full spectrum — advisory, project delivery, team reinforcement, compliance, managed IT, and professional training including Lean Six Sigma certification. We specialise in financial services, insurance, and technology sectors.</div></div></div>
+            <div class="fi"><button class="fq" onclick="tf(this)">Who do you typically work with?<svg class="fic" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="fa"><div class="fai">Organisations of all sizes across Luxembourg and Europe — financial institutions, fund administrators, insurance companies, and growing tech firms that value deep local knowledge combined with international best practices.</div></div></div>
+            <div class="fi"><button class="fq" onclick="tf(this)">How does team reinforcement work?<svg class="fic" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="fa"><div class="fai">We embed experienced IT professionals directly into your teams. Whether you need a specialist for a three-month sprint or extended augmentation, our consultants integrate quickly and deliver from day one — rigorously vetted for technical skill and cultural fit.</div></div></div>
+            <div class="fi"><button class="fq" onclick="tf(this)">What Lean Six Sigma training do you offer?<svg class="fic" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="fa"><div class="fai">We deliver certified Lean Six Sigma programmes — Yellow Belt and Green Belt. Training is available for teams and individuals, combining theoretical knowledge with practical application tailored to your industry and processes.</div></div></div>
+            <div class="fi"><button class="fq" onclick="tf(this)">What makes Sharp Source different from larger firms?<svg class="fic" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="fa"><div class="fai">You work with senior leadership, not junior associates. We're agile enough to move fast and personal enough to truly understand your business — every client gets our full attention, without the overhead of larger consulting firms.</div></div></div>
+        </div>
+    </div></div>
+</section>
+
+<section class="jobs" id="careers" aria-labelledby="jobs-t">
+    <div class="ct"><div class="jobs-inner">
+        <div class="rv"><div class="sl">Careers</div><h2 class="st" id="jobs-t">Join our team</h2><p class="ss" style="margin:1.25rem auto 0;">We're always looking for talented IT professionals who share our people-first values.</p></div>
+        <div class="jobs-grid rv">
+            <div class="jc" id="job-1">
+                <div class="jc-top" onclick="toggleJob(this)"><div class="jc-left"><h4>IT Consultant — Advisory</h4><div class="jc-meta"><span>Luxembourg</span><span>Full-time / Freelance</span></div></div><svg class="jc-arrow" width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="jc-body"><div class="jc-body-inner">
+                    <p>Join our advisory practice and help clients align their IT strategy with business goals. You'll work directly with decision-makers across Luxembourg's financial services and insurance sectors.</p>
+                    <ul><li>3+ years IT consulting or advisory experience</li><li>Strong understanding of IT governance and digital strategy</li><li>Excellent communication skills in English; French is a plus</li><li>Experience in financial services, insurance, or technology sectors</li></ul>
+                    <div class="jc-actions"><a href="mailto:careers@sharpsource.lu?subject=Application%20—%20IT%20Consultant%20(Advisory)" class="jc-btn jc-btn-apply">Apply now</a><button class="jc-btn jc-btn-share" onclick="shareJob('IT Consultant — Advisory','Join Sharp Source as an IT Consultant in our Advisory practice. Work with clients across Luxembourg to shape IT strategy.','job-1')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share</button></div>
+                </div></div>
+            </div>
+            <div class="jc" id="job-2">
+                <div class="jc-top" onclick="toggleJob(this)"><div class="jc-left"><h4>Project Manager</h4><div class="jc-meta"><span>Luxembourg</span><span>Full-time / Freelance</span></div></div><svg class="jc-arrow" width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="jc-body"><div class="jc-body-inner">
+                    <p>Lead IT transformation and delivery projects for our clients. You'll manage cross-functional teams, ensure on-time delivery, and maintain clear stakeholder communication throughout.</p>
+                    <ul><li>5+ years project management experience in IT environments</li><li>PMP, PRINCE2, or Agile certification preferred</li><li>Proven track record delivering complex IT projects</li><li>Comfortable working with senior stakeholders</li></ul>
+                    <div class="jc-actions"><a href="mailto:careers@sharpsource.lu?subject=Application%20—%20Project%20Manager" class="jc-btn jc-btn-apply">Apply now</a><button class="jc-btn jc-btn-share" onclick="shareJob('Project Manager','Join Sharp Source as a Project Manager. Lead IT transformation projects across Luxembourg and Europe.','job-2')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share</button></div>
+                </div></div>
+            </div>
+            <div class="jc" id="job-3">
+                <div class="jc-top" onclick="toggleJob(this)"><div class="jc-left"><h4>Compliance Specialist</h4><div class="jc-meta"><span>Luxembourg</span><span>Full-time / Freelance</span></div></div><svg class="jc-arrow" width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <div class="jc-body"><div class="jc-body-inner">
+                    <p>Help our clients navigate GDPR, DORA, and other regulatory frameworks. You'll assess compliance gaps, implement remediation plans, and ensure IT systems meet Luxembourg and EU standards.</p>
+                    <ul><li>3+ years in IT compliance, risk, or audit</li><li>Working knowledge of GDPR, DORA, and financial regulation</li><li>Strong analytical and documentation skills</li><li>CISA, CRISC, or similar certification is a plus</li></ul>
+                    <div class="jc-actions"><a href="mailto:careers@sharpsource.lu?subject=Application%20—%20Compliance%20Specialist" class="jc-btn jc-btn-apply">Apply now</a><button class="jc-btn jc-btn-share" onclick="shareJob('Compliance Specialist','Join Sharp Source as a Compliance Specialist. Help clients navigate GDPR, DORA, and regulatory frameworks.','job-3')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg> Share</button></div>
+                </div></div>
             </div>
         </div>
-    </section>
+        <p class="jobs-note rv">Don't see the right fit? Send us your CV at <a href="mailto:careers@sharpsource.lu">careers@sharpsource.lu</a> — we're always open to exceptional people.</p>
+    </div></div>
+</section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="faq-layout">
-                <div class="faq-sticky"><div class="reveal"><div class="section-label">Questions & Answers</div><h2 class="section-title">Frequently<br>asked questions</h2><p class="section-subtitle">Everything you need to know about working with us.</p></div><div class="faq-visual reveal"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Meeting"></div></div>
-                <div class="faq-list reveal">
-                    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What types of IT expertise do you offer?<svg class="faq-icon" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Our expertise spans the full IT consulting spectrum — from strategic advisory and project management to compliance, technical support, and talent placement. We specialise in digital transformation, cloud migration, cybersecurity, data governance, and regulatory compliance frameworks relevant to Luxembourg's financial sector.</div></div></div>
-                    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Who do you typically work with?<svg class="faq-icon" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">We partner with organisations of all sizes across Luxembourg and Europe — from established financial institutions and fund administrators to growing tech companies and public sector bodies.</div></div></div>
-                    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How do you deliver project results?<svg class="faq-icon" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Every engagement starts with understanding your goals. We build a clear roadmap, assign the right consultants, and manage delivery with full transparency — agile, collaborative, and accountable.</div></div></div>
-                    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you provide short-term consultants?<svg class="faq-icon" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">Yes — from three-month sprints to extended augmentation. Our network allows us to mobilise experienced IT professionals quickly with rigorous quality vetting.</div></div></div>
-                    <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What makes Sharp Source different from larger firms?<svg class="faq-icon" viewBox="0 0 20 20" fill="none"><path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button><div class="faq-answer"><div class="faq-answer-inner">You work directly with senior leadership. We're agile enough to move fast and personal enough to truly understand your business — every client gets our full attention.</div></div></div>
-                </div>
-            </div>
+<section class="cta" id="contact" aria-labelledby="cta-t">
+    <div class="cta-bg"></div>
+    <div class="cta-i rv">
+        <div class="sl" style="justify-content:center;">Get in Touch</div>
+        <h2 id="cta-t">Let's build something <em>together</em></h2>
+        <p class="cta-sub">Whether you're looking for strategic advice, project support, or the right talent — we'd love to start a conversation.</p>
+        <a href="mailto:info@sharpsource.lu" class="bp bp-l"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@sharpsource.lu</a>
+    </div>
+</section>
+
+<footer role="contentinfo">
+    <div class="ct">
+        <div class="ft">
+            <div class="fb"><img src="LogoSS_name.png" alt="Sharp Source" class="fli"><p>The source of success. IT consulting, project delivery, and expert talent across Luxembourg and Europe.</p></div>
+            <div class="fc"><h5>Expertise</h5><ul><li><a href="#services">Advisory</a></li><li><a href="#services">Projects</a></li><li><a href="#services">Team Reinforcement</a></li><li><a href="#services">Compliance</a></li><li><a href="#services">Managed IT</a></li><li><a href="#services">Training</a></li></ul></div>
+            <div class="fc"><h5>Company</h5><ul><li><a href="#approach">Our Approach</a></li><li><a href="#faq">FAQ</a></li><li><a href="#careers">Careers</a></li><li><a href="#contact">Contact</a></li></ul></div>
+            <div class="fc"><h5>Connect</h5><ul><li><a href="mailto:info@sharpsource.lu">info@sharpsource.lu</a></li><li><a href="mailto:careers@sharpsource.lu">careers@sharpsource.lu</a></li></ul></div>
         </div>
-    </section>
+        <div class="fbot"><span>&copy; 2025 Sharp Source S.à r.l. All rights reserved.</span><a href="legal.html">Mentions légales & Privacy</a></div>
+    </div>
+</footer>
 
-    <!-- CONTACT CTA -->
-    <section class="contact-cta" id="contact">
-        <div class="contact-cta-bg"></div>
-        <div class="contact-cta-inner reveal">
-            <div class="section-label" style="justify-content:center;">Get in Touch</div>
-            <h2>Let's build something <em>together</em></h2>
-            <p class="contact-cta-sub">Whether you're looking for strategic advice, project support, or the right talent — we'd love to start a conversation.</p>
-            <div class="contact-cta-actions">
-                <a href="mailto:info@sharpsource.lu" class="btn-primary btn-primary-light"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> info@sharpsource.lu</a>
-                <span class="contact-cta-divider">or</span>
-                <a href="https://www.linkedin.com/company/sharpsource" target="_blank" class="btn-outline"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.94 2.94C4.94 4.05 4.05 4.94 2.94 4.94S.94 4.05.94 2.94 1.83.94 2.94.94s2 .89 2 2zM1 6.85h3.88V19H1V6.85zM7.56 6.85h3.72v1.66h.05c.52-.98 1.79-2.01 3.68-2.01 3.94 0 4.67 2.59 4.67 5.96V19h-3.88v-5.78c0-1.38-.02-3.15-1.92-3.15-1.92 0-2.22 1.5-2.22 3.05V19H7.56V6.85z"/></svg> Connect on LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand"><img src="LogoSS_name.png" alt="Sharp Source" class="footer-logo-img"><p>The source of success. IT consulting, project delivery, and expert talent across Luxembourg and Europe.</p></div>
-                <div class="footer-col"><h5>Expertise</h5><ul><li><a href="#services">Advisory</a></li><li><a href="#services">Projects</a></li><li><a href="#services">Placement</a></li><li><a href="#services">Compliance</a></li><li><a href="#services">Support</a></li></ul></div>
-                <div class="footer-col"><h5>Company</h5><ul><li><a href="#approach">Our Approach</a></li><li><a href="#why-us">Why Us</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
-                <div class="footer-col"><h5>Connect</h5><ul><li><a href="#">LinkedIn</a></li><li><a href="mailto:info@sharpsource.lu">Email</a></li></ul></div>
-            </div>
-            <div class="footer-bottom"><span>&copy; 2025 Sharp Source S.à r.l. All rights reserved.</span></div>
-        </div>
-    </footer>
-
-    <script>
-        const navbar=document.getElementById('navbar');
-        window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>50);});
-        const revealEls=document.querySelectorAll('.reveal');
-        const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-        revealEls.forEach(el=>obs.observe(el));
-        function toggleFaq(b){const i=b.parentElement,a=i.querySelector('.faq-answer'),v=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>{x.classList.remove('active');x.querySelector('.faq-answer').style.maxHeight=null;});if(!v){i.classList.add('active');a.style.maxHeight=a.scrollHeight+'px';}}
-        document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.nav-links').classList.remove('open');}});});
-    </script>
+<script>
+const nb=document.getElementById('nb');
+window.addEventListener('scroll',()=>{nb.classList.toggle('scrolled',window.scrollY>50)});
+const rvs=document.querySelectorAll('.rv');
+new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'}).observe&&rvs.forEach(el=>new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'}).observe(el));
+function tf(b){const i=b.parentElement,a=i.querySelector('.fa'),v=i.classList.contains('active');document.querySelectorAll('.fi').forEach(x=>{x.classList.remove('active');x.querySelector('.fa').style.maxHeight=null});if(!v){i.classList.add('active');a.style.maxHeight=a.scrollHeight+'px'}}
+function toggleJob(t){const c=t.closest('.jc'),b=c.querySelector('.jc-body'),v=c.classList.contains('open');document.querySelectorAll('.jc').forEach(x=>{x.classList.remove('open');x.querySelector('.jc-body').style.maxHeight=null});if(!v){c.classList.add('open');b.style.maxHeight=b.scrollHeight+'px'}}
+function shareJob(title,text,id){const url=window.location.origin+window.location.pathname+'#'+id;const liUrl='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(url);window.open(liUrl,'_blank','width=600,height=500')}
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.nl').classList.remove('open')}})});
+</script>
 </body>
 </html>
